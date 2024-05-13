@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Care Nidan Kendra Hirankheda - Gallery</title>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+
+        /* Gallery Container */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Gallery Item */
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Gallery Image */
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Gallery Caption */
+        .gallery-caption {
+            padding: 15px;
+            background-color: #fff;
+        }
+
+        .gallery-caption h3 {
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+
+        .gallery-caption p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            background-color: rgba(0, 0, 0, 0.9);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        .lightbox-img {
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Life Care Nidan Kendra Hirankheda Gallery</h1>
+        <p>Discover our facilities through images</p>
+    </header>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img class="gallery-img" src="img1.jpg" alt="Operating Room" onclick="openLightbox('img1.jpg', 'Operating Room')">
+            <div class="gallery-caption">
+                <h3>About us</h3>
+              <p>The land of cure LIFE CARE NIDAN KENDRA HIRANKHEDA.</p>
+            </div>
+        </div>
+        <div class="gallery-item">
+            <img class="gallery-img" src="img2.jpg" alt="Reception Area" onclick="openLightbox('img2.jpg', 'Reception Area')">
+            <div class="gallery-caption">
+                <h3>FRONT</h3>
+                <p>The roof of the Cure station LIFE CARE NIDAN KENDRA HIRANKHEDA</p>
+            </div>
+        </div>
+         <div class="gallery-item">
+            <img class="gallery-img" src="img3.jpg" alt="Reception Area" onclick="openLightbox('img3.jpg', 'Reception Area')">
+            <div class="gallery-caption">
+                <h3>Reception Area</h3>
+                <p>Our welcoming reception area ensures a smooth check-in process for our patients.</p>
+            </div>
+        </div> <div class="gallery-item">
+            <img class="gallery-img" src="img4.jpg" alt="Reception Area" onclick="openLightbox('img4.jpg', 'Reception Area')">
+            <div class="gallery-caption">
+                <h3>Rest of the Patient</h3>
+                <p>Welcoming you in our threapy area of life care nidan kendra hirankheda.</p>
+            </div>
+        </div> <div class="gallery-item">
+            <img class="gallery-img" src="img5.jpg" alt="Reception Area" onclick="openLightbox('img5.jpg', 'Reception Area')">
+            <div class="gallery-caption">
+                <h3>Side view</h3>
+                <p>Best thing is it is located in a village.</p>
+            </div>
+        </div> <div class="gallery-item">
+            <img class="gallery-img" src="img6.jpg" alt="Reception Area" onclick="openLightbox('img6.jpg', 'Reception Area')">
+            <div class="gallery-caption">
+                <h3>Reception Area</h3>
+                <p>Our welcoming reception area ensures a smooth check-in process for our patients.</p>
+            </div>
+        </div> <div class="gallery-item">
+            <img class="gallery-img" src="img7.jpg" alt="Reception Area" onclick="openLightbox('img7.jpg', 'Reception Area')">
+            <div class="gallery-caption">
+                <h3>IN THE NATURE</h3>
+                <p>Our Hospital has its natural beauty.</p>
+            </div>
+        </div> <div class="gallery-item">
+            <img class="gallery-img" src="img8 .jpg" alt="Reception Area" onclick="openLightbox('img8 .jpg', 'Reception Area')">
+            <div class="gallery-caption">
+                <h3>The Doctor</h3>
+                <p>Cabin of Sir Dr. Insaaf hussain hirankheda wale</p>
+            </div>
+        </div> <div class="gallery-item">
+            <img class="gallery-img" src="img9.jpg" alt="Reception Area" onclick="openLightbox('img9.jpg', 'Reception Area')">
+            <div class="gallery-caption">
+                <h3>Safe and beautiful</h3>
+                <p>Life is short but we will make it easy to live.</p>
+            </div>
+        </div> <div class="gallery-item">
+            <img class="gallery-img" src="img10.jpg" alt="Reception Area" onclick="openLightbox('img10.jpg', 'Reception Area')">
+            <div class="gallery-caption">
+                <h3>Top view</h3>
+                <p>The Top view of our hospital is also a beauty.</p>
+            </div>
+        </div>
+        <!-- Add more gallery items as needed -->
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" class="lightbox-img" src="" alt="">
+    </div>
+
+    <script>
+        function openLightbox(imageSrc, caption) {
+            document.getElementById('lightbox-img').src = imageSrc;
+            document.getElementById('lightbox-img').alt = caption;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIFE CARE NIDAN KENDRA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>LIFE CARE NIDAN KENDRA</h1>
+        <p class="address">हिरानखेड़ा, रहतगढ़, सागर, एमपी।</p>
+        <div class="button-container">
+            <button class="button button-primary" onclick="window.location.href='gallery.html'">गैलरी</button>
+          <select id="languageDropdown" onchange="redirect()">
+        <option value="english">English</option>
+        <option value="hindi">हिंदी</option>
+    </select>
+        </div>
+    </header>
+    <main>
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="slide.jpg" alt="स्लाइड 1">
+                    <div class="slide-text">स्लाइड 1 टेक्स्ट</div>
+                </div>
+                <div class="slide">
+                    <img src="slide2.jpg" alt="स्लाइड 2">
+                    <div class="slide-text">स्लाइड 2 टेक्स्ट</div>
+                </div>
+                <div class="slide">
+                    <img src="slide3.jpg" alt="स्लाइड 3">
+                    <div class="slide-text">स्लाइड 3 टेक्स्ट</div>
+                </div>
+            </div>
+            <div class="prev-btn">&#10094;</div>
+            <div class="next-btn">&#10095;</div>
+            <div class="pagination"></div>
+        </div>  
+        <div class="doctor-profile" onclick="toggleProfile(this)">
+            <div class="doctor-photo">
+                <img src="dr1 .jpg" alt="डॉक्टर फोटो">
+            </div>
+            <div class="doctor-details">
+                <div class="doctor-name">डॉ। इंसाफ हुसैन हिरानखेड़ा वाले</div>
+                <div class="doctor-rank">बी.एच.एम.एस., एल.बी.एस. भोपाल एम.पी.एम.एस.यू जबलपुर।</div>
+                <div class="doctor-rank">मोबाइल: 9009687331</div>
+            </div>
+        </div>
+        <div class="doctor-profile" onclick="toggleProfile(this)">
+            <div class="doctor-photo">
+                <img src="dr2.jpeg" alt="डॉक्टर फोटो">
+            </div>
+            <div class="doctor-details">
+                <div class="doctor-name">डॉ। निगाहत सिद्दीक</div>
+                <div class="doctor-rank">बी.यू.एम.एस., जी.यू.एम.सी. भोपाल महिला और त्वचा रोग विशेषज्ञ।</div>
+                <div class="doctor-rank">मोबाइल: 9981667756</div>
+            </div>
+        </div>
+        <h2>रिपोर्ट सेक्शन</h2>
+        <form id="reportForm" onsubmit="submitForm(event)">
+            <label for="name">नाम:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">आयु:</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="sex">लिंग:</label>
+            <select id="sex" name="sex" required>
+                <option value="" disabled selected>लिंग चुनें</option>
+                <option value="male">पुरुष</option>
+                <option value="female">महिला</option>
+                <option value="other">अन्य</option>
+            </select>
+
+            <label for="address">पता:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="problem">समस्या:</label>
+            <textarea id="problem" name="problem" rows="4" required></textarea>
+
+            <label for="phone">फ़ोन नंबर:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+
+            <button type="submit">सबमिट करें</button>
+        </form>
+        <div class="about-section">
+            <h2>हमारे बारे में</h2>
+            <p>हम अपने समुदाय को गुणवत्ता वाली स्वास्थ्य सेवाएं प्रदान करने के लिए समर्पित हैं।</p>
+            <h3>खुले वक्त</h3>
+            <p>सोमवार - शुक्रवार: 9:00 पीएम - 6:00 पीएम, भोपाल में</p> <a class="btn-m" href="https://maps.app.goo.gl/zZoPhBB5kCiUXwaf8">रूट</a>   
+            <p>शनिवार - रविवार: 11:00 पीएम - 7:00 पीएम, हिरानखेड़ा में</p><h3>इलाज की जाने वाली बीमारियाँ
+</h3>
+<li>लकवा</li>
+<li>गठिया</li>
+<li>जोड़ों में दर्द</li>
+<li>पथरी</li>
+<li>न्यूराल्जिया</li>
+<li>मिर्गी</li>
+<li>बवासीर</li>
+<li>शुगर</li>
+<li>यौन रोग</li>
+<li>नशे की बुराई</li>
+<li>त्वचा रोग</li>
+<li>बांझपन</li>
+<li>बांझपन</li>
+<li>कैंसर</li>
+<li>मानसिक बीमारी</li>
+<li>बाल झड़ना और सफेद बाल</li>
+<li>मोटापा</li>
+<li>सभी प्रकार की स्त्रीरोग</li>
+<div class="availability-section">
+        <h2>उपलब्धता जाँचें</h2>
+        <form id="availabilityForm" onsubmit="checkAvailability(event)">
+            <label for="day">दिन चुनें:</label>
+            <select id="day" name="day">
+                <option value="monday">सोमवार</option>
+                <option value="tuesday">मंगलवार</option>
+                <option value="wednesday">बुधवार</option>
+                <option value="thursday">गुरुवार</option>
+                <option value="friday">शुक्रवार</option>
+                <option value="saturday">शनिवार</option>
+                <option value="sunday">रविवार</option>
+            </select>
+
+            <label for="time">समय चुनें:</label>
+            <select id="time" name="time">
+                <option value="morning">सुबह (9:00 बजे - 12:00 बजे)</option>
+                <option value="afternoon">दोपहर (12:00 बजे - 4:00 बजे)</option>
+                <option value="evening">शाम (4:00 बजे - 7:00 बजे)</option>
+            </select>
+
+            <button type="submit">उपलब्धता जाँचें</button>
+        </form>
+        <p id="availabilityMessage"></p>
+    </div>
+
+    <div class="contact-section">
+        <h2>संपर्क करें</h2>
+        <ul class="contact-list">
+            <li><a href="mailto:medicoboy93@gmail.com"><i class="fas fa-envelope"></i> medicoboy93@gmail.com</a></li>
+            <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i> Life_care_nidan_kendra</a></li>
+            <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i> Facebook</a></li>
+            <li><a href="https://wa.me/9009687331"><i class="fab fa-whatsapp"></i> 9009687331</a></li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <h3>Life Care Nidan Kendra Hirankheda</h3>
+                <p>आपका स्वास्थ्य और कल्याण का साथी। कृपालु देखभाल और विशेषज्ञ चिकित्सा सेवाएं प्रदान करना।</p>
+                <p>व्यक्तिगत स्वास्थ्य समाधान के लिए आज ही संपर्क करें।</p>
+                <p>-- डॉ। इंसाफ हुसैन</p>
+            </div>
+        </div>
+    </footer>
+    <h1>धन्यावाद </h1>
+</main>
+
+<script src="main.js">main.js</script>
+</body>
+</html>
